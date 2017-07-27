@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Morris.js Charts</title>
+  <title>AdminLTE 2 | UI Sliders</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
   <?php $this->view('templates/common_css.php'); ?>
+  <?=link_tag('assets/plugins/ionslider/ion.rangeSlider.css');?>
+  <?=link_tag('assets/plugins/ionslider/ion.rangeSlider.skinNice.css');?>
+  <?=link_tag('assets/plugins/bootstrap-slider/slider.css');?>
+  
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -19,110 +24,108 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Morris Charts
-        <small>Preview sample</small>
+        Sliders
+        <small>range sliders</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Charts</a></li>
-        <li class="active">Morris</li>
+        <li><a href="#">UI</a></li>
+        <li class="active">Sliders</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-      <div class="callout callout-warning">
-        <h4>Warning!</h4>
-
-        <p><b>Morris.js</b> charts are no longer maintained by its author. We would recommend using any of the other
-          charts that come with the template.</p>
-      </div>
       <div class="row">
-        <div class="col-md-6">
-          <!-- AREA CHART -->
+        <div class="col-xs-12">
           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Area Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+            <div class="box-header">
+              <h3 class="box-title">Ion Slider</h3>
             </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row margin">
+                <div class="col-sm-6">
+                  <input id="range_1" type="text" name="range_1" value="">
+                </div>
+
+                <div class="col-sm-6">
+                  <input id="range_2" type="text" name="range_2" value="1000;100000" data-type="double" data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000" data-hasgrid="true">
+                </div>
+              </div>
+              <div class="row margin">
+                <div class="col-sm-6">
+                  <input id="range_5" type="text" name="range_5" value="">
+                </div>
+                <div class="col-sm-6">
+                  <input id="range_6" type="text" name="range_6" value="">
+                </div>
+              </div>
+              <div class="row margin">
+                <div class="col-sm-12">
+                  <input id="range_4" type="text" name="range_4" value="10000;100000">
+                </div>
+              </div>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-
-          <!-- DONUT CHART -->
-          <div class="box box-danger">
-            <div class="box-header with-border">
-              <h3 class="box-title">Donut Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
         </div>
-        <!-- /.col (LEFT) -->
-        <div class="col-md-6">
-          <!-- LINE CHART -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Line Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="line-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- BAR CHART -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Bar Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="bar-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (RIGHT) -->
+        <!-- /.col -->
       </div>
       <!-- /.row -->
 
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Bootstrap Slider</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row margin">
+                <div class="col-sm-6">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
+
+                  <p>data-slider-id="red"</p>
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
+
+                  <p>data-slider-id="blue"</p>
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
+
+                  <p>data-slider-id="green"</p>
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
+
+                  <p>data-slider-id="yellow"</p>
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="aqua">
+
+                  <p>data-slider-id="aqua"</p>
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+
+                  <p style="margin-top: 10px">data-slider-id="purple"</p>
+                </div>
+                <div class="col-sm-6 text-center">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="aqua">
+                  <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200" data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.11
@@ -136,6 +139,7 @@
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
@@ -328,90 +332,72 @@
 <!-- ./wrapper -->
 
 <?php $this->view('templates/common_js.php'); ?>
+<script src="<?=base_url();?>assets/plugins/ionslider/ion.rangeSlider.min.js"></script>
+<script src="<?=base_url();?>assets/plugins/bootstrap-slider/bootstrap-slider.js"></script>
 
-<!-- Morris.js charts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="<?=base_url();?>assets/plugins/morris/morris.min.js"></script>
 <script>
   $(function () {
-    "use strict";
+    /* BOOTSTRAP SLIDER */
+    $('.slider').slider();
 
-    // AREA CHART
-    var area = new Morris.Area({
-      element: 'revenue-chart',
-      resize: true,
-      data: [
-        {y: '2011 Q1', item1: 2666, item2: 2666},
-        {y: '2011 Q2', item1: 2778, item2: 2294},
-        {y: '2011 Q3', item1: 4912, item2: 1969},
-        {y: '2011 Q4', item1: 3767, item2: 3597},
-        {y: '2012 Q1', item1: 6810, item2: 1914},
-        {y: '2012 Q2', item1: 5670, item2: 4293},
-        {y: '2012 Q3', item1: 4820, item2: 3795},
-        {y: '2012 Q4', item1: 15073, item2: 5967},
-        {y: '2013 Q1', item1: 10687, item2: 4460},
-        {y: '2013 Q2', item1: 8432, item2: 5713}
-      ],
-      xkey: 'y',
-      ykeys: ['item1', 'item2'],
-      labels: ['Item 1', 'Item 2'],
-      lineColors: ['#a0d0e0', '#3c8dbc'],
-      hideHover: 'auto'
+    /* ION SLIDER */
+    $("#range_1").ionRangeSlider({
+      min: 0,
+      max: 5000,
+      from: 1000,
+      to: 4000,
+      type: 'double',
+      step: 1,
+      prefix: "$",
+      prettify: false,
+      hasGrid: true
+    });
+    $("#range_2").ionRangeSlider({});
+
+    $("#range_5").ionRangeSlider({
+      min: 0,
+      max: 10,
+      type: 'single',
+      step: 0.1,
+      postfix: " mm",
+      prettify: false,
+      hasGrid: true
+    });
+    $("#range_6").ionRangeSlider({
+      min: -50,
+      max: 50,
+      from: 0,
+      type: 'single',
+      step: 1,
+      postfix: "°",
+      prettify: false,
+      hasGrid: true
     });
 
-    // LINE CHART
-    var line = new Morris.Line({
-      element: 'line-chart',
-      resize: true,
-      data: [
-        {y: '2011 Q1', item1: 2666},
-        {y: '2011 Q2', item1: 2778},
-        {y: '2011 Q3', item1: 4912},
-        {y: '2011 Q4', item1: 3767},
-        {y: '2012 Q1', item1: 6810},
-        {y: '2012 Q2', item1: 5670},
-        {y: '2012 Q3', item1: 4820},
-        {y: '2012 Q4', item1: 15073},
-        {y: '2013 Q1', item1: 10687},
-        {y: '2013 Q2', item1: 8432}
-      ],
-      xkey: 'y',
-      ykeys: ['item1'],
-      labels: ['Item 1'],
-      lineColors: ['#3c8dbc'],
-      hideHover: 'auto'
+    $("#range_4").ionRangeSlider({
+      type: "single",
+      step: 100,
+      postfix: " light years",
+      from: 55000,
+      hideMinMax: true,
+      hideFromTo: false
     });
-
-    //DONUT CHART
-    var donut = new Morris.Donut({
-      element: 'sales-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954", "#00a65a"],
-      data: [
-        {label: "Download Sales", value: 12},
-        {label: "In-Store Sales", value: 30},
-        {label: "Mail-Order Sales", value: 20}
-      ],
-      hideHover: 'auto'
-    });
-    //BAR CHART
-    var bar = new Morris.Bar({
-      element: 'bar-chart',
-      resize: true,
-      data: [
-        {y: '2006', a: 100, b: 90},
-        {y: '2007', a: 75, b: 65},
-        {y: '2008', a: 50, b: 40},
-        {y: '2009', a: 75, b: 65},
-        {y: '2010', a: 50, b: 40},
-        {y: '2011', a: 75, b: 65},
-        {y: '2012', a: 100, b: 90}
-      ],
-      barColors: ['#00a65a', '#f56954'],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['CPU', 'DISK'],
-      hideHover: 'auto'
+    $("#range_3").ionRangeSlider({
+      type: "double",
+      postfix: " miles",
+      step: 10000,
+      from: 25000000,
+      to: 35000000,
+      onChange: function (obj) {
+        var t = "";
+        for (var prop in obj) {
+          t += prop + ": " + obj[prop] + "\r\n";
+        }
+        $("#result").html(t);
+      },
+      onLoad: function (obj) {
+        //
+      }
     });
   });
 </script>

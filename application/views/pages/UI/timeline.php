@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Morris.js Charts</title>
+  <title>AdminLTE 2 | Timeline</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php $this->view('templates/common_css.php'); ?>
@@ -19,103 +19,187 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Morris Charts
-        <small>Preview sample</small>
+        Timeline
+        <small>example</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Charts</a></li>
-        <li class="active">Morris</li>
+        <li><a href="#">UI</a></li>
+        <li class="active">Timeline</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-      <div class="callout callout-warning">
-        <h4>Warning!</h4>
 
-        <p><b>Morris.js</b> charts are no longer maintained by its author. We would recommend using any of the other
-          charts that come with the template.</p>
-      </div>
+      <!-- row -->
       <div class="row">
-        <div class="col-md-6">
-          <!-- AREA CHART -->
+        <div class="col-md-12">
+          <!-- The time line -->
+          <ul class="timeline">
+            <!-- timeline time label -->
+            <li class="time-label">
+                  <span class="bg-red">
+                    10 Feb. 2014
+                  </span>
+            </li>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-envelope bg-blue"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+
+                <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+
+                <div class="timeline-body">
+                  Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                  weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                  jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                  quora plaxo ideeli hulu weebly balihoo...
+                </div>
+                <div class="timeline-footer">
+                  <a class="btn btn-primary btn-xs">Read more</a>
+                  <a class="btn btn-danger btn-xs">Delete</a>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-user bg-aqua"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+
+                <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-comments bg-yellow"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+
+                <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+
+                <div class="timeline-body">
+                  Take me to your leader!
+                  Switzerland is small and neutral!
+                  We are more like Germany, ambitious and misunderstood!
+                </div>
+                <div class="timeline-footer">
+                  <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline time label -->
+            <li class="time-label">
+                  <span class="bg-green">
+                    3 Jan. 2014
+                  </span>
+            </li>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-camera bg-purple"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+
+                <div class="timeline-body">
+                  <img src="http://placehold.it/150x100" alt="..." class="margin">
+                  <img src="http://placehold.it/150x100" alt="..." class="margin">
+                  <img src="http://placehold.it/150x100" alt="..." class="margin">
+                  <img src="http://placehold.it/150x100" alt="..." class="margin">
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <li>
+              <i class="fa fa-video-camera bg-maroon"></i>
+
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
+
+                <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
+
+                <div class="timeline-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tMWkeBIohBs" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="timeline-footer">
+                  <a href="#" class="btn btn-xs bg-maroon">See comments</a>
+                </div>
+              </div>
+            </li>
+            <!-- END timeline item -->
+            <li>
+              <i class="fa fa-clock-o bg-gray"></i>
+            </li>
+          </ul>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-md-12">
           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Area Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+            <div class="box-header">
+              <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
             </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+            <div class="box-body">
+                  <pre style="font-weight: 600;">
+&lt;ul class="timeline">
+
+    &lt;!-- timeline time label -->
+    &lt;li class="time-label">
+        &lt;span class="bg-red">
+            10 Feb. 2014
+        &lt;/span>
+    &lt;/li>
+    &lt;!-- /.timeline-label -->
+
+    &lt;!-- timeline item -->
+    &lt;li>
+        &lt;!-- timeline icon -->
+        &lt;i class="fa fa-envelope bg-blue">&lt;/i>
+        &lt;div class="timeline-item">
+            &lt;span class="time">&lt;i class="fa fa-clock-o">&lt;/i> 12:05&lt;/span>
+
+            &lt;h3 class="timeline-header">&lt;a href="#">Support Team&lt;/a> ...&lt;/h3>
+
+            &lt;div class="timeline-body">
+                ...
+                Content goes here
+            &lt;/div>
+
+            &lt;div class="timeline-footer">
+                &lt;a class="btn btn-primary btn-xs">...&lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/li>
+    &lt;!-- END timeline item -->
+
+    ...
+
+&lt;/ul>
+                  </pre>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-
-          <!-- DONUT CHART -->
-          <div class="box box-danger">
-            <div class="box-header with-border">
-              <h3 class="box-title">Donut Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
         </div>
-        <!-- /.col (LEFT) -->
-        <div class="col-md-6">
-          <!-- LINE CHART -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Line Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="line-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- BAR CHART -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Bar Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="bar-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (RIGHT) -->
+        <!-- /.col -->
       </div>
       <!-- /.row -->
 
@@ -123,6 +207,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.11
@@ -136,6 +221,7 @@
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
@@ -326,94 +412,6 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
 <?php $this->view('templates/common_js.php'); ?>
-
-<!-- Morris.js charts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="<?=base_url();?>assets/plugins/morris/morris.min.js"></script>
-<script>
-  $(function () {
-    "use strict";
-
-    // AREA CHART
-    var area = new Morris.Area({
-      element: 'revenue-chart',
-      resize: true,
-      data: [
-        {y: '2011 Q1', item1: 2666, item2: 2666},
-        {y: '2011 Q2', item1: 2778, item2: 2294},
-        {y: '2011 Q3', item1: 4912, item2: 1969},
-        {y: '2011 Q4', item1: 3767, item2: 3597},
-        {y: '2012 Q1', item1: 6810, item2: 1914},
-        {y: '2012 Q2', item1: 5670, item2: 4293},
-        {y: '2012 Q3', item1: 4820, item2: 3795},
-        {y: '2012 Q4', item1: 15073, item2: 5967},
-        {y: '2013 Q1', item1: 10687, item2: 4460},
-        {y: '2013 Q2', item1: 8432, item2: 5713}
-      ],
-      xkey: 'y',
-      ykeys: ['item1', 'item2'],
-      labels: ['Item 1', 'Item 2'],
-      lineColors: ['#a0d0e0', '#3c8dbc'],
-      hideHover: 'auto'
-    });
-
-    // LINE CHART
-    var line = new Morris.Line({
-      element: 'line-chart',
-      resize: true,
-      data: [
-        {y: '2011 Q1', item1: 2666},
-        {y: '2011 Q2', item1: 2778},
-        {y: '2011 Q3', item1: 4912},
-        {y: '2011 Q4', item1: 3767},
-        {y: '2012 Q1', item1: 6810},
-        {y: '2012 Q2', item1: 5670},
-        {y: '2012 Q3', item1: 4820},
-        {y: '2012 Q4', item1: 15073},
-        {y: '2013 Q1', item1: 10687},
-        {y: '2013 Q2', item1: 8432}
-      ],
-      xkey: 'y',
-      ykeys: ['item1'],
-      labels: ['Item 1'],
-      lineColors: ['#3c8dbc'],
-      hideHover: 'auto'
-    });
-
-    //DONUT CHART
-    var donut = new Morris.Donut({
-      element: 'sales-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954", "#00a65a"],
-      data: [
-        {label: "Download Sales", value: 12},
-        {label: "In-Store Sales", value: 30},
-        {label: "Mail-Order Sales", value: 20}
-      ],
-      hideHover: 'auto'
-    });
-    //BAR CHART
-    var bar = new Morris.Bar({
-      element: 'bar-chart',
-      resize: true,
-      data: [
-        {y: '2006', a: 100, b: 90},
-        {y: '2007', a: 75, b: 65},
-        {y: '2008', a: 50, b: 40},
-        {y: '2009', a: 75, b: 65},
-        {y: '2010', a: 50, b: 40},
-        {y: '2011', a: 75, b: 65},
-        {y: '2012', a: 100, b: 90}
-      ],
-      barColors: ['#00a65a', '#f56954'],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['CPU', 'DISK'],
-      hideHover: 'auto'
-    });
-  });
-</script>
 </body>
 </html>

@@ -30,6 +30,7 @@ class General_operations_model extends CI_Model{
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
       <link rel='stylesheet' href='".$base_url."assets/plugins/AdminLTE/dist/css/AdminLTE.min.css'>
       <link rel='stylesheet' href='".$base_url."assets/plugins/AdminLTE/dist/css/skins/_all-skins.min.css'>
+      <link rel='stylesheet' href='".$base_url."assets/css/material_custom.css'>
       ";
   }
   /*
@@ -38,14 +39,12 @@ class General_operations_model extends CI_Model{
   public function getCommonJS($base_url){
     return "
       <script src='".$base_url."assets/plugins/jquery-2.2.3.min.js'></script>
-      <script> $.widget.bridge('uibutton', $.ui.button); </script>
       <script src='".$base_url."assets/plugins/bootstrap/js/bootstrap.min.js'></script>
       <script src='".$base_url."assets/plugins/slimScroll/jquery.slimscroll.min.js'></script>
       <script src='".$base_url."assets/plugins/fastclick/fastclick.js'></script>
       <script src='".$base_url."assets/plugins/AdminLTE/dist/js/app.min.js'></script>
       <script src='".$base_url."assets/plugins/AdminLTE/dist/js/demo.js'></script>
-      <script src='".$base_url."assets/plugins/knob/jquery.knob.js'></script>
-      <script src='".$base_url."assets/plugins/sparkline/jquery.sparkline.min.js'></script>
+      <script src='".$base_url."assets/js/material_js.js'></script>
     ";
   }
 	/*
