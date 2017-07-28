@@ -11,8 +11,8 @@ class Admin extends CI_Controller{
 		// echo "$folder/$page";
 		// $data["folder"] = $folder;
 		$this->load->model('general_operations_model'); // for login etc
-		$data['js_include'] = $this->general_operations_model->getCommonJS(base_url());
-		// getCommonJS
+		$data['folder'] = $folder;
+		$data['page'] = $page;
 		$this->load->view('pages/'.$folder.'/'.$page,$data);
 	}
 
